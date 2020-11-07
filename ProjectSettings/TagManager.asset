@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tile
+  - Tile2
+  - Tile3
+  - Tile4
+  - Tile5
+  - Tile6
+  - Karo
   layers:
   - Default
   - TransparentFX
