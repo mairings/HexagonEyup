@@ -12,16 +12,13 @@ public class HexGrid : MonoBehaviour
    
     void Start()
     {
+        startValues();
+        gridGenerator();
+    }
 
-        if (PlayerPrefs.GetInt("a") == 0)
-        {
-            PlayerPrefs.SetInt("rowSayisi", 8);
-            PlayerPrefs.SetInt("columnSayisi", 9);
-            PlayerPrefs.SetInt("renkSayisi", 5);
-            PlayerPrefs.SetInt("a", 1);
-
-        }
-
+    //Gelen verilere göre Otomatik Hexagon Grid oluşturur
+    void gridGenerator()
+    {
         x = PlayerPrefs.GetInt("rowSayisi");
         y = PlayerPrefs.GetInt("columnSayisi");
 
@@ -33,12 +30,13 @@ public class HexGrid : MonoBehaviour
             for (int j = 0; j < y; j++)
             {
                 Vector2 hexpos = MesafeHesaplayici(i, j);
-                Vector3 pos = new Vector3(hexpos.x-3, hexpos.y-4, 0);
+                Vector3 pos = new Vector3(hexpos.x - 3.7f, hexpos.y - 4, 0);
                 Instantiate(spawnThis, pos, Quaternion.identity);
             }
         }
     }
 
+    //Karolar arası mesafeyi hesaplar
     Vector2 MesafeHesaplayici(int x, int y)
     {
         Vector2 position = Vector2.zero;
@@ -56,4 +54,19 @@ public class HexGrid : MonoBehaviour
 
         return position;
     }
+
+    //Başlangıç değerlerinin atanması
+    void startValues()
+    {
+        if (PlayerPrefs.GetInt("a") == 0)
+        {
+            PlayerPrefs.SetInt("rowSayisi", 8);
+            PlayerPrefs.SetInt("columnSayisi", 9);
+            PlayerPrefs.SetInt("renkSayisi", 5);
+            PlayerPrefs.SetInt("a", 1);
+
+        }
+    }
+
+
 }

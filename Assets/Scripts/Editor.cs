@@ -2,23 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.SceneManagement;
 public class Editor : MonoBehaviour
 {
-    public Dropdown colorDropD, rowDropD, columnDropD;
-    Dropdown ncolorDropD, nrowDropD, ncolumnDropD;
+    public TMP_Dropdown colorDropD, rowDropD, columnDropD;
+    TMP_Dropdown ncolorDropD, nrowDropD, ncolumnDropD;
     int renkSayisi, rowSay, columnSay;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        ncolorDropD = colorDropD;
-        nrowDropD = rowDropD;
-        ncolumnDropD = columnDropD; 
-        colorChange();
-        rowChange();
-        columnChange();
-
+        baslangicDegerleri();
     }
 
     public void colorChange()
@@ -104,6 +100,15 @@ public class Editor : MonoBehaviour
         }
     }
 
+    void baslangicDegerleri()
+    {
+        ncolorDropD = colorDropD;
+        nrowDropD = rowDropD;
+        ncolumnDropD = columnDropD;
+        colorChange();
+        rowChange();
+        columnChange();
+    }
 
     
 
