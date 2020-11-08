@@ -18,11 +18,6 @@ public class RandomSprite : MonoBehaviour
     }
 
 
-            
-
-
-
-
     private void Update()
     {
         if (FindObjectOfType<TileTouch>().parentTemizle)
@@ -34,19 +29,12 @@ public class RandomSprite : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        
-
         if (collision.gameObject.CompareTag("Player"))
         {
 
-
             transform.parent = collision.gameObject.transform;
-               // FindObjectOfType<rotateCllider>().eskiChildListesi.Add(gameObject);
-               // print("adet" + FindObjectOfType<rotateCllider>().eskiChildListesi.Count + "bir" + FindObjectOfType<rotateCllider>().eskiChildListesi[0].name);
-
+         
         }
     }
-
-    
 
 }

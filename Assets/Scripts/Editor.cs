@@ -16,7 +16,7 @@ public class Editor : MonoBehaviour
     {
         baslangicDegerleri();
     }
-
+    //Renk sayısı seçimi
     public void colorChange()
     {
         renkSayisi = ncolorDropD.value;
@@ -34,6 +34,7 @@ public class Editor : MonoBehaviour
         }
     }
 
+    //Satır sayısı seçimi
     public void rowChange()
     {
         rowSay = nrowDropD.value;
@@ -66,7 +67,8 @@ public class Editor : MonoBehaviour
                 break;
         }
     }
-
+    
+    //Kolon sayısı seçimi
     public void columnChange()
     {
         columnSay = ncolumnDropD.value;

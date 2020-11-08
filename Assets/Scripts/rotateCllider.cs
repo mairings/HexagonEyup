@@ -27,7 +27,6 @@ public class rotateCllider : MonoBehaviour
           //  eskiChildListesi.Add(transform.Find("Tile").transform);
             
             
-            print(eskiChildListesi.Count+"bööö");
             
         }*/
     }

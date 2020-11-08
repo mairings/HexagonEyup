@@ -7,6 +7,7 @@ public class yonKontrol : MonoBehaviour
     public bool sil;
     public string colorKaro;
 
+    //Altıgenin hangi yönünde hangi rengin olduğunun tespit edilmesi
     private void OnTriggerStay2D(Collider2D collision)
     {
         returnColliderlers(collision);
@@ -24,6 +25,7 @@ public class yonKontrol : MonoBehaviour
         }
     }
     
+    //Dikkate alınmaması gereken colliderler
     void returnColliderlers(Collider2D a)
     {
         if (a == this.GetComponent<Collider2D>()) return;
